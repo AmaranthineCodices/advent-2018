@@ -10,8 +10,9 @@ mod puzzle;
 use puzzle::Puzzle;
 
 fn main() {
-    let solvers = vec![
-        puzzle::FrequencyCalibration,
+    let solvers: Vec<&Puzzle> = vec![
+        &puzzle::FrequencyCalibration,
+        &puzzle::FrequencyDuplication,
     ];
 
     let args: Vec<String> = env::args().collect();
