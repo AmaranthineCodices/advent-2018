@@ -1,0 +1,8 @@
+[package]
+name = "advent-2018"
+version = "0.1.0"
+authors = ["AmaranthineCodices <git@amaranthinecodices.me>"]
+
+[dependencies]
+regex = "1.1.0"
+lazy_static = "1.2.0"
