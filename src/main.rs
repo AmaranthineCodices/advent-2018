@@ -13,6 +13,8 @@ fn main() {
     let solvers: Vec<&Puzzle> = vec![
         &puzzle::FrequencyCalibration,
         &puzzle::FrequencyDuplication,
+        &puzzle::ChecksumCalculation,
+        &puzzle::CommonInventoryChars,
     ];
 
     let args: Vec<String> = env::args().collect();
@@ -21,7 +23,8 @@ fn main() {
 
     let mut f = File::open(input_path).expect("could not open input file");
     let mut contents = String::new();
-    f.read_to_string(&mut contents).expect("could not read file");
+    f.read_to_string(&mut contents)
+        .expect("could not read file");
 
     println!("puzzle {} with input from {}", puzzle_index, input_path);
     println!("result: {}", solvers[puzzle_index].solve(&contents));
