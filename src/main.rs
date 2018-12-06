@@ -15,6 +15,7 @@ fn main() {
         &puzzle::FrequencyDuplication,
         &puzzle::ChecksumCalculation,
         &puzzle::CommonInventoryChars,
+        &puzzle::OverlappingFabricClaims,
     ];
 
     let args: Vec<String> = env::args().collect();
